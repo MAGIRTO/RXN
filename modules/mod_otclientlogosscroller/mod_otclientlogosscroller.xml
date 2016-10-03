@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.3.0"
+	client="site"
+	method="upgrade">
+	<name>OT Client Logos Scroller</name>
+	<author>OmegaTheme.com</author>
+	<creationDate>September 2014</creationDate>
+	<copyright>Copyright (C) 2014 OmegaTheme.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>services@omegatheme.com</authorEmail>
+	<authorUrl>http://omegatheme.com</authorUrl>
+	<version>3.3.0</version>
+	<description>MOD_OTSCROLLER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_otclientlogosscroller">mod_otclientlogosscroller.php</filename>
+		<folder>assets</folder>
+		<folder>elements</folder>
+		<folder>tmpl</folder>
+        <folder>language</folder>
+		<filename>index.html</filename> 
+		<filename>helper.php</filename> 
+		<filename>mod_otclientlogosscroller.xml</filename>
+	</files>
+        <languages folder="language">
+            <language tag="en-GB">en-GB/en-GB.mod_otclientlogosscroller.ini</language>
+            <language tag="en-GB">en-GB/en-GB.mod_otclientlogosscroller.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params"  addfieldpath="/modules/mod_otclientlogosscroller/elements">
+                    <fieldset name="basic">
+                        
+                       
+						<field name="@sp3" type="spacer" label="Add logos" class="ot_layer" description="Add logos"/>
+                        <field name="otclientlogosscroller"
+                        type="otclientlogosscroller"
+                        icon="list"
+                        label=""
+                        description=""
+                        default=""/>                       
+                    </fieldset>
+					<fieldset name="settings">
+						<field type="radio" class="btn-group" name="ot_display" label="MOD_OTSCROLLER_FIELD_DISPLAY_LABEL" description="MOD_OTSCROLLER_FIELD_DISPLAY_DESC" default="slider" >
+                            <option value="slider">Horizontal Slider</option>
+                            <option value="grid">Grid </option> 
+                        </field>
+						<field 
+                            name="ot_width_img" 
+                            type="text" default="100" 
+                            label="MOD_OTSCROLLER_FIELD_WIDTH_IMG_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_WIDTH_IMG_DESC" />
+							<field 
+                            name="ot_height_img" 
+                            type="text" default="40" 
+                            label="MOD_OTSCROLLER_FIELD_HEIGHT_IMG_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_HEIGHT_IMG_DESC" />
+						 <field type="radio" class="btn-group" name="ot_tooltip" label="MOD_OTSCROLLER_FIELD_TOOLTIP_LABEL" description="MOD_OTSCROLLER_FIELD_TOOLTIP_DESC" default="1" >
+                            <option value="1">Enable</option>
+                            <option value="0">Disable</option> 
+                        </field>
+						<field type="radio" class="btn-group" name="tooltip" label="MOD_OTSCROLLER_FIELD_PTOOLTIP_LABEL" description="MOD_OTSCROLLER_FIELD_PTOOLTIP_DESC" default="top" >
+                            <option value="top">Top</option>
+                            <option value="bottom">Botoom</option> 
+							<option value="left">Left</option>
+                            <option value="right">Right</option> 
+                        </field>
+                        <field type="radio" class="btn-group" name="ot_opacity" label="MOD_OTSCROLLER_FIELD_OPACITY_LABEL" description="MOD_OTSCROLLER_FIELD_OPACITY_DESC" default="1" >
+                            <option value="1">Enable</option>
+                            <option value="0">Disable</option> 
+                        </field>
+						<field type="list" class="btn-group" name="ot_target" label="MOD_OTSCROLLER_FIELD_TARGET_LABEL" description="MOD_OTSCROLLER_FIELD_TARGET_DESC" default="_blank" >
+                            <option value="_blank">Opens in a new tab</option>
+                            <option value="_self">Opens in the same frame</option> 
+							<option value="_parent">Opens in the parent frame</option>
+                            <option value="_top">Opens in the full body of the window</option> 
+                        </field>
+						<field type="radio" class="btn-group" name="ot_resize_image" label="MOD_OTSCROLLER_FIELD_RESIZE_LABEL" description="MOD_OTSCROLLER_FIELD_RESIZE_DESC" default="1" >
+                            <option value="1">Enable</option>
+                            <option value="0">Disable</option> 
+                        </field>
+						<field type="radio" class="btn-group" name="ot_type_resize" label="MOD_OTSCROLLER_FIELD_TYPE_RESIZE_LABEL" description="MOD_OTSCROLLER_FIELD_TYPE_RESIZE_DESC" default="crop" >
+                            <option value="crop">Crop</option>
+                            <option value="max">Max</option> 
+							<option value="force">Force</option>
+                        </field>						
+                        <field name="@sp1" type="spacer" label="Horizontal Carousel Slider" class="ot_layer" description="Horizontal Carousel Slider"/>
+                        <field 
+                            name="ot_width" 
+                            type="text" default="100" 
+                            label="MOD_OTSCROLLER_FIELD_WIDTH_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_WIDTH_DESC" />
+                        <field 
+                            name="ot_item" 
+                            type="text" default="5" 
+                            label="MOD_OTSCROLLER_FIELD_ITEM_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_ITEM_DESC" />
+                        <field 
+                            name="ot_duration" 
+                            type="text" default="1250" 
+                            label="MOD_OTSCROLLER_FIELD_DURATION_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_DURATION_DESC" />
+                        <field 
+                            name="ot_toduration" 
+                            type="text" default="2500" 
+                            label="MOD_OTSCROLLER_FIELD_TODURATION_LABEL" 
+                            description="MOD_OTSCROLLER_FIELD_TODURATION_DESC" />
+                        <field type="radio" class="btn-group" name="ot_pager" label="MOD_OTSCROLLER_FIELD_PAGER_LABEL" description="MOD_OTSCROLLER_FIELD_PAGER_DESC" default="1" >
+                            <option value="1">Pager</option>
+                            <option value="0">No pager</option> 
+                        </field>
+                        <field type="radio" class="btn-group" name="ot_pn" label="MOD_OTSCROLLER_FIELD_PN_LABEL" description="MOD_OTSCROLLER_FIELD_PN_DESC" default="1" >
+                            <option value="1">Enable</option>
+                            <option value="0">Disable</option> 
+                        </field>
+                        <field name="@sp2" type="spacer" label="Grid Columns" class="ot_layer" description="Grid Columns"/>
+                        <field type="list" class="btn-group" name="ot_number" label="MOD_OTSCROLLER_FIELD_NUMBER_LABEL" description="MOD_OTSCROLLER_FIELD_NUMBER_DESC" default="5" >
+                            <option value="1">1</option> 
+                            <option value="2">2</option>
+                            <option value="3">3</option> 
+                            <option value="4">4</option>
+                            <option value="5">5</option> 
+                            <option value="6">6</option>
+                            <option value="7">7</option> 
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option> 
+                            <option value="11">11</option> 
+                            <option value="12">12</option>  
+                        </field>
+					</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+  <name>joombig image animation list</name>
+  <author>joombig.com</author>
+  <creationDate>10/2014</creationDate>
+  <copyright>Copyright (C) 2014 joombig.com. All rights reserved.</copyright>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <authorEmail>support@joombig.com</authorEmail>
+  <authorUrl>www.joombig.com</authorUrl>
+  <version>1.1</version>
+  <description>MODULE_DESC</description>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_joombig_image_animation_list.ini</language>
+  </languages>
+  <files>
+    <filename module="mod_joombig_image_animation_list">mod_joombig_image_animation_list.php</filename>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <folder>tmpl/</folder>
+    <folder>fields/</folder>
+    <folder>helpers/</folder>
+    <folder>language/</folder>
+    <folder>assets/</folder>
+  </files>
+  <config>
+    <fields name="params">
+      <fieldset name="basic" addfieldpath="/modules/mod_joombig_image_animation_list/fields">
+        <field type="assets" url="/modules/mod_joombig_image_animation_list/assets" />
+        <field type="tmpl" name="sp_style" default="Jbimageanimationlist"  label="STYLE" description="STYLE_DESC" />
+		<field name="enable_jQuery" type="radio" default="1" label="Enable/Disable jQuery" description="select Enable/Disable">
+			<option value="1">Enable</option>
+			<option value="0">Disable</option>
+		</field>
+		<field name="width_module" type="text" default="100%" label="Width of Module(%)" description="Width of Module(%)" />
+		<!--<field name="height_module" type="text" default="360" label="Height of Module" description="Height without px" />-->
+		<field name="margin_module" type="text" default="0 auto" label="Margin of Module" description="Set Margin for Module" />
+		
+		<!--<field name="width_item" type="text" default="500" label="Width of Item" description="Width without px" />-->
+		<field name="height_item" type="text" default="150" label="Height of each Item" description="Height without px" />
+		
+		<field name="background_item" type="hotcolor" default="#fff" label="Background of Item" description="Background Color" />
+		<field name="background_item_hover" type="hotcolor" default="#000" label="Background of Item Hover" description="Background Color" />
+		<field name="color_border_left" type="hotcolor" default="#fff004" label="Color of Border Left Item" description="Color" />
+		<field name="color_border_left_hover" type="hotcolor" default="#fff004" label="Color of Border Left Item Hover" description="Color" />
+		<field name="style_module" type="list" default="1" label="Style of Module" description="Choose style">
+			<option value="1">Style 1</option>
+			<option value="2">Style 2</option>
+			<option value="3">Style 3</option>
+		</field>
+      </fieldset>
+      <fieldset name="sliders" description="Setting for all item,Click Add New(require fill title)" label="Setting Item">
+        <field type="sliders" name="sliders" />
+      </fieldset>
+	  <fieldset name="animation">
+        <field type="animation" name="animation" />
+		<field type="loader" />
+
+		<field name="font_size_title" type="text" default="30" label="Font size of title" description="Font size without px" />
+		<field name="font_size_title_hover" type="text" default="14" label="Font size of title when hover" description="Font size without px" />
+		<field name="color_title" type="hotcolor" default="#333" label="Color of Title" description="Color of Title" />
+		<field name="color_title_hover" type="hotcolor" default="#333" label="Color of Title Hover" description="Color of Title" />
+		
+		
+		<field name="font_size_intro" type="text" default="14" label="Font size of introtext" description="Font size without px" />
+		<field name="font_size_intro_hover" type="text" default="30" label="Font size of introtext when hover" description="Font size without px" />
+		<field name="color_intro" type="hotcolor" default="#666" label="Color of Intro" description="Color of Intro" />
+		<field name="color_intro_hover" type="hotcolor" default="#666" label="Color of Intro Hover" description="Color of Intro" />
+		<field name="open_link" type="list" default="1" label="Open link" description="Choose style">
+			<option value="1">Open link in current window</option>
+			<option value="2">Open link in new window</option>
+		</field>
+      </fieldset>
+      <fieldset name="advanced">	  
+		<field name="moduleclass_sfx" type="text" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		<field name="module_cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+		<option value="1">JGLOBAL_USE_GLOBAL</option>
+		<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+		</field>
+		<field name="cache" type="hidden" default="1" />
+		<field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+		<field name="cachemode" type="hidden" default="itemid">
+			<option value="itemid"></option>
+		</field>
+      </fieldset>
+    </fields>
+  </config>
+</extension>

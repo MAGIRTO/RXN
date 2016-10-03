@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="3.0" client="site" method="upgrade">
+
+<name>GalleryAholic</name>
+
+<creationDate>May 2013</creationDate>
+
+<version>1.5.2-PRO</version>
+
+<author>GraphicAholic</author>
+
+<copyright>Copyright 2012-2015 - graphicaholic.com</copyright>
+
+<license>http://www.gnu.org/copyleft/lgpl.html</license>
+
+<authorEmail>support@graphicaholic.com</authorEmail>
+
+<authorUrl>http://www.graphicaholic.com/demos</authorUrl>
+
+	<description>
+
+	<![CDATA[
+
+		GalleryAholic is a jQuery plugin for creating a dynamic grid layout. It manages to convert HTML elements into 'blocks' and position them in a well-arranged grid layout like <a href="https://www.pinterest.com/">Pinterest®</a> or in a 'no box' layout like the <a href="http://windows.microsoft.com/en-us/windows-8/meet">Windows® 8</a> format.<p>&nbsp;</p><p style="line-height:180%;font-size:1.2em"><a href="http://www.graphicaholic.com"><img src="../modules/mod_galleryaholic/images/GalleryAholicHeader.jpg" alt="GalleryAholic" style="float:left;margin:0 20px 20px 0px;padding:4px;border:1px solid #ddd"/></a><br style="clear:both" /></p><p  style="color:#555">The module features the following photo gallery selections and layouts:</p>
+
+		<ul style="color:#777">
+
+			<li>Joomla Folder Plus Gallery</li>
+
+			<li>Joomla Category Gallery</li>
+
+			<li>Flickr Photoset Gallery</li>
+
+			<li>Picasa Album Gallery</li>
+
+			<li>Lightbox option with photo download feature</li>
+
+			<li>Personalized styling options</li>
+
+			<li>Customize how your gallery will look when viewed from a monitor, tablet or smartphone device</li>
+
+		</ul>
+
+		<div style="color:#555">
+
+			<p>You can use this module to display your photos in a customizable responsive, mobile ready layout.</p>
+
+			<p>Please read the documentation contained within the module setting tooltips or go to the <a href="http://graphicaholic.com/demos">GraphicAholic</a> page and download the PDF documentation file.</p>
+
+			<p>Version: 1.5.2-PRO</p>
+
+		</div>
+
+	]]>
+
+	</description>
+
+	<files>
+
+		<filename module="mod_galleryaholic">mod_galleryaholic.php</filename>
+
+        <folder>js</folder>
+
+        <folder>css</folder>
+
+        <folder>font</folder>
+
+        <folder>tmpl</folder>
+
+        <folder>fields</folder>
+
+		<folder>assets</folder>
+
+        <folder>helpers</folder>
+
+        <folder>images</folder>
+
+		<filename>index.html</filename>
+
+		<filename>mod_galleryaholic.xml</filename>
+
+		<filename>helper.php</filename>
+
+	</files>	
+
+		<updateservers>
+
+		<server type="extension" priority="1" name="GalleryAholic Update">http://www.graphicaholic.com/downloads/GalleryAholic/galleryaholic.xml</server>
+
+		</updateservers>
+
+	<params addpath="">
+
+		</params>
+
+	<config>    
+
+	<fields name="params" addfieldpath="/modules/mod_galleryaholic/fields">
+
+	<!-- General Settings -->
+
+	<fieldset name="basic" label="General Settings">	
+
+	<field name="renderSetting" type="gaspacer" label="Rendered Gallery Selection" style="title" />
+
+	<field name="imageFeed" type="list" default="6" label="Get gallery from?" description="Choose option. You can not mix-and-match where you get your galleries. ">
+
+			<option value="2">Flickr Photosets</option>
+
+			<option value="3">Picasa Gallery</option>
+
+			<option value="5">Joomla Category</option>
+
+			<option value="6">Joomla Folder Plus</option>
+
+	</field>
+
+	</fieldset>	
+
+	<!-- Advanced Settings -->
+
+	<fieldset name="advanced" group="advanced" label="Advanced Settings">
+
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+
+				<field name="cache" type="radio" class="btn-group" default="1" label="Caching" description="Select whether to cache the content of this module">
+
+					<option value="1">Use global</option>
+
+					<option value="0">No caching</option>
+
+				</field>
+
+				<field name="cache_time" showon="cache:1" type="text" default="900" label="Cache Time" description="The time before the module is recached" />	
+
+	</fieldset>
+
+	<fieldset name="globalstyling" group="globalstyling" label="Global Styling">
+
+	<field name="lightboxSetting" type="gaspacer" label="Lightbox Settings" style="title" />
+
+	<field name="lightbox" type="radio" class="btn-group" default="0" label="Use Lightbox feature" description="Option to use the Fancybox2 lightbox feature when a photo is clicked.">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="lightboxScript" showon="lightbox:1" type="radio" class="btn-group" default="1" label="Load lightbox script?" description="If you are using another extension that uses the Fancybox lightbox, you may need to set this option to No.">
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>	
+
+	<field name="downloadImage" showon="lightbox:1" type="radio" class="btn-group" default="0" label="Image download link" description="Option to offer Image download link in lightbox.">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="matrixSetting" type="gaspacer" label="Display Matrix Settings" style="title" />
+
+	<field name="numberCol" type="text" default="3" label="Number of Columns" description="Enter number of columns you want to desktop-laytop display across the screen." />
+
+	<field name="smallCol" type="text" default="2" label="Small mobile columns" description="Enter number of columns you want to mobile display across the screen." />
+
+	<field name="medCol" type="text" default="3" label="Medium mobile columns" description="Enter number of columns you want to small tablet display across the screen." />
+
+	<field name="largeCol" type="text" default="4" label="Large mobile columns" description="Enter number of columns you want to large tablet display across the screen." />
+
+	<field name="LRoffset" type="text" default="8" label="Left/Right Offset" description="Left-Right margin offset between columns" />
+
+	<field name="TBoffset" type="text" default="8" label="Top/Bottom Offset" description="Top-Bottom margin offset between rows" />
+
+	<field name="bottomMargin" type="text" default="0" label="Bottom module margin" description="Requires PX after value. i.e. 100px" />
+
+	<field name="styleSetting" type="gaspacer" label="Display Style Settings" style="title" />
+
+	<field name="gridLayout" type="list" default="1" label="Grid Styling" description="Choose your grid layout. ">	
+
+			<option value="1">Standard Box Layout</option>	
+
+			<option value="2">Basic No Box Layout</option>
+
+	</field>
+
+	<field name="fontSize" type="text" default="17px" label="Title font size" description="Type in title font size. NOTE: Must include the px after your value. " />
+
+	<field name="gridColor" type="color" showon="gridLayout:1" default="#FFFFFF" label="Grid background color" description="Select background box color." />
+
+	<field name="titleColor" type="color" default="#777777" label="Title color" description="Select title color" />
+
+	<field name="descColor" type="color" default="#777777" label="Description color" description="Select description text color" />
+
+	<field name="metaColor" type="color" default="#777777" label="Tag color" description="Select bottom tag text color" />
+
+	<field name="grayStyle" type="gaspacer" label="Grayscale Option" style="title" />
+
+	<field name="imgGrayscale" type="radio" class="btn-group" default="0" label="Grayscale photo effect" description="Grayscale effect your photos?">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	</fieldset>	
+
+	<fieldset name="rendersettings" group="rendersettings" label="Joomla Folder Plus Settings">
+
+	<!-- Joomla Folder Plus Settings -->	
+
+	<field name="jfolderSetting" type="gaspacer" label="Joomla Folder Plus Settings" style="title" />
+
+			<field name="thumbnail_mode" type="hidden" default="none" class="btn-group" label="Image Mode" description="For GalleryAholic it is strongly suggested that you use the 'Default' option. The Resize and Crop options are used with other extensions using this framework.">
+
+					<option value="none">Default</option>
+
+					<option value="resize">Resize</option>
+
+					<option value="crop">Crop</option>
+
+				</field>
+
+				<field name="image_width" type="hidden" default="100" label="Image Width" description="Set the image width" />
+
+				<field name="image_height" type="hidden" default="100" label="Image Height" description="Set the image height" />
+
+				<field name="data_source" type="gaimagefolder" directory="images" label="Image path folder" description="Relative to Joomla images folder. Default relative path is 'YOUR/JOOMLA/SITE/PATH/IMAGES'." />
+
+	</fieldset>
+
+	<fieldset name="outsideservice" group="outsideservice" label="Flickr | Google+ Settings">
+
+	<!-- Flickr Photoset Settings -->
+
+	<field name="flickrSetting" type="gaspacer" label="Flickr Settings" style="title" />
+
+	<field name="flickrAPI" type="text" default="d90e841af64dd771e24303ca493c4f74" label="Flickr API" description="Enter your specific Flickr API code" />
+
+	<field name="flickrCache" type="radio" class="btn-group" default="0" label="Use Flickr Cache?" description="Select to use Flickr cache. RECOMMENDED! ">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="flickrSet" type="text" default="" label="Flickr Photoset ID" description="Enter your Flickr Photoset ID. This will be a 17 digit number found in your Photoset URL." />
+
+	<field name="flickrThumb" type="list" default="small" label="Thumbnail Size" description="Select what photo size to use for your Flickr thumbnails.">	
+
+			<option value="1">Small</option>
+
+			<option value="2">Medium</option>
+
+			<option value="3">Large</option>
+
+	</field>
+
+	<field name="flickrTitle" type="radio" class="btn-group" default="1" label="Show Flickr Photo Title?" description="Select to show Flickr photo titles. ">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="flickrDesc" type="radio" class="btn-group" default="1" label="Show Flickr Description?" description="Select to show Flickr photo titles. ">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="flickrTag" type="text" filter="raw" default="" label="Global bottom right tag" description="Supports basic HTML tags." />
+
+	<!-- Picasa Album Settings -->
+
+	<field name="picasaSetting" type="gaspacer" label="Picasa (Google+) Settings" style="title" />
+
+	<field name="picasaUser" type="text" default="" label="Picasa User Name/Number" description="Enter your Picasa User Name or User ID number" />
+
+	<field name="user_albumid" type="text" default="" label="Picasa Album Number" description="Enter the Picasa Album Number you wish to display" />
+
+	<field name="albumTitle" type="text" default="" label="Picasa Album Title" description="Enter your Picasa Album title. This option is strickly a housekeeping feature to help you remember what Picasa Album you are using." />
+
+	<field name="photoSize" type="text" default="240" label="Photo size to display" description="This setting is global to the photo you display and the photo that shows in the lightbox. Set this large enough but not to large!" />
+
+	<field name="picasaPhoto" type="list" default="u" label="Photo Size" description="Select what photo orientation to use for your Picasa Album.">	
+
+			<option value="u">Full Size</option>
+
+			<option value="c">Cropped</option>
+
+	</field>
+
+	<field name="picasaTitle" type="radio" class="btn-group" default="1" label="Show Picasa Photo Title?" description="Select to show Picasa photo titles. ">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="picasaDesc" type="radio" class="btn-group" default="1" label="Show Picasa Description?" description="Select to show Picasa photo descriptions. ">	
+
+			<option value="0">No</option>	
+
+			<option value="1">Yes</option>
+
+	</field>
+
+	<field name="picasaTag" type="text" filter="raw" default="" label="Global bottom right tag" description="Supports basic HTML tags." />	
+
+	</fieldset>
+
+	<fieldset name="categorysettings" group="categorysettings" label="Joomla Category Settings">
+
+	<!-- Joomla Category Settings -->	
+
+	<field name="categorySetting" type="gaspacer" label="Joomla Category Settings" style="title" />
+
+	<field name="note21" type="note" class="alert" label="Housekeeping note" description="The 'Check to use' option below is strickly a housekeeping option. Unchecking this option will disable module features." />	
+
+	<field name="imgf_cfg" addfieldpath="/modules/mod_galleryaholic/helpers/fields" type="imagesrc" default="imgf_inline_introtext" label="Check to use" description="Make sure this option is Checked">
+
+			<option value="imgf_inline_introtext">options below.</option>
+
+	</field>
+
+	<field name="imgf_placeholder" label="Placeholder image" class="btn-group" description="The Default Image. Applied if category article has no image" type="radio" default="1">
+
+			<option value="1">Yes</option>
+
+			<option value="0">No</option>
+
+	</field>
+
+	<field name="imgf_placeholder_path" showon="imgf_placeholder:1" type="text" default="modules/mod_galleryaholic/images/no_photo.jpg" label="Placeholder Path (or Url)" description="The Path (or URL) of Default Image" />
+
+	<field name="catid" type="category" extension="com_content" multiple="false" size="10" default="" label="Select Category" description="Click inside option box to select category" />
+
+	<field name="show_child_category_articles" type="radio" class="btn-group" default="0" label="Child Category Articles" description="Include or Exclude Articles from Child Categories.">
+
+			<option value="1">Include</option>
+
+			<option value="0">Exclude
+
+			</option>
+
+	</field>  
+
+	<field name="levels" type="text" default="1" label="Category Depth" description="The number of child category levels to return." />
+
+	<field name="show_front" type="list" default="show" class="btn-group" label="Featured Articles" description="Select to Show, Hide, or Only display Featured Articles.">
+
+			<option value="show">Show</option>
+
+			<option value="hide">Hide</option>
+
+			<option value="only">Only</option>
+
+	</field>
+
+	<field name="catFeatured"  showon="show_front:show,only" type="list" default="1" label="Featured grid width" description="If article is Featured, how many grid boxes wide should it consume?">
+
+			<option value="1">1 Grid Wide</option>
+
+			<option value="2">2 Grid Wide</option>
+
+			<option value="3">3 Grid Wide</option>
+
+			<option value="4">4 Grid Wide</option>
+
+			<option value="5">5 Grid Wide</option>
+
+			<option value="6">6 Grid Wide</option>
+
+			<option value="7">7 Grid Wide</option>
+
+			<option value="8">8 Grid Wide</option>
+
+	</field>
+
+	<field name="info1" type="info" default="You can customize each photo's grid size beyond the above options. When editoring an article, click onto the 'Publishing' top tab. In the 'Created by alias' enter a value greater then the number 1. For example, entering the number 4 will span your photo across four grids. If your overall grid setting is five, this will allow a photo to span across four of the five grids. Really... cool!" />
+
+	<field name="article_ordering" type="list" default="a.title" label="Article Field to Order By" description="Select which field you would like Articles to be ordered by. Featured Ordering should only be used when Filtering Option for Featured Articles is set to 'Only'.">
+
+			<option value="a.ordering">Article Manager Order</option>
+
+			<option value="fp.ordering">Featured Articles Order</option>
+
+			<option value="a.hits">Hits</option>
+
+			<option value="a.title">Title</option>
+
+			<option value="a.id">ID</option>
+
+			<option value="a.alias">Alias</option>
+
+			<option value="a.created">Created Date</option>
+
+			<option value="modified">Modified Date</option>
+
+			<option value="publish_up">Start Publishing Date</option>
+
+			<option value="a.publish_down">Finish Publishing Date</option>
+
+	</field>
+
+	<field name="article_ordering_direction" type="list" default="ASC" label="Ordering Direction" description="Select the direction you would like Articles to be ordered by.">
+
+			<option value="DESC">Descending</option>
+
+			<option value="ASC">Ascending</option>
+
+	</field>
+
+	<field name="count" type="text" default="12" label="Count" description="The number of articles to display. The default value of 0 will display all articles." />
+
+	<field name="title_display" type="radio" default="1" class="btn-group" label="Display article titles" description="Display article titles">
+
+			<option value="1">Yes</option>
+
+			<option value="0">No</option>
+
+	</field>
+
+	<field name="item_title_maxlength" showon="title_display:1" type="text" default="25" label="Title Maxlength" description="Maxlength of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+
+	<field name="item_desc_display" type="radio" filter="raw" default="1" class="btn-group" label="Description display" description="Display description of item">
+
+			<option value="1">Yes</option>
+
+			<option value="0">No</option>
+
+	</field>
+
+	<field name="item_desc_maxlength" showon="item_desc_display:1" type="text" default="200" label="Description Maxlength" description="Maxlength of description by characters. Enter value 0 if you want to show entire introtext. Please enter integer number >= 0." />
+
+	<field name="metaTag" type="list" default="1" class="btn-group" label="Bottom tag option" description="">
+
+			<option value="0">None</option>
+
+			<option value="1">Custom bottom tag</option>
+
+			<option value="2">Category author article tag</option>
+
+	</field>
+
+	<field name="jCategoryTag" showon="metaTag:1" type="textarea" filter="raw" cols="35" rows="4" default="" label="Custom bottom right tag" description="GLOBAL Basic HTML code allowed" />
+
+	<field name="prefixTag" showon="metaTag:2" type="text" filter="raw" cols="35" rows="4" default="" label="Category prefix tag" description="Text to show before category Author name" />
+
+	<field name="item_readmore_display" class="btn-group" type="radio" default="1" label="Display Read More" description="Allow show/hide Read More Link">
+
+			<option value="1">Yes</option>
+
+			<option value="0">No</option>
+
+	</field>
+
+	</fieldset>	
+
+</fields>
+
+</config>
+
+</extension>

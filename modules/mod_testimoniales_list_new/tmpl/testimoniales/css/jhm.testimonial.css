@@ -1,0 +1,288 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.clearfix,
+.clear {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after,
+.clear:before,
+.clear:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after,
+.clear:after {
+  clear: both;
+}
+.jhm-testimonial {
+  background: #222A57;
+  color: #6a6a6a;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  position: relative;
+  background-image: url('http://www.webnlinea.in/cimages/contacto@opticareyher.com/3984e6_fondo.jpg');
+}
+
+.jhm-title {
+  margin: 0 0 7px;
+  padding: 0 0 7px;
+}
+.jhm-subtitle > div {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 17px;
+}
+.jhm-title [class^="icon-"],
+.jhm-title [class*=" icon-"] {
+  margin-right: 10px;
+}
+.jhm-testimonial .jhm-carousel {
+  position: relative;
+  margin-bottom: 20px;
+}
+.jhm-testimonial .jhm-carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.jhm-testimonial .jhm-carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+  -moz-transition: 0.6s ease-in-out left;
+  -o-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.jhm-testimonial .jhm-carousel-inner > .item > img,
+.jhm-testimonial .jhm-carousel-inner > .item > a > img {
+  display: block;
+  line-height: 1;
+}
+.jhm-testimonial .jhm-carousel-inner > .active,
+.jhm-testimonial .jhm-carousel-inner > .next,
+.jhm-testimonial .jhm-carousel-inner > .prev {
+  display: block;
+}
+/*.jhm-testimonial .jhm-carousel-inner > .active {
+  left: 0;
+}*/
+.jhm-testimonial .jhm-carousel-inner > .next,
+.jhm-testimonial .jhm-carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.jhm-testimonial .jhm-carousel-inner > .next {
+  left: 100%;
+}
+.jhm-testimonial .jhm-carousel-inner > .prev {
+  left: -100%;
+}
+.jhm-testimonial .jhm-carousel-inner > .next.left,
+.jhm-testimonial .jhm-carousel-inner > .prev.right {
+  left: 0;
+}
+.jhm-testimonial .jhm-carousel-inner > .active.left {
+  left: -100%;
+}
+.jhm-testimonial .jhm-carousel-inner > .active.right {
+  left: 100%;
+}
+.jhm-testimonial .jhm-carousel-control {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 34px;
+  font-weight: 100;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  background: #616161;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+}
+.jhm-testimonial .jhm-carousel-control.right {
+  right: 45%;
+}
+.jhm-testimonial .jhm-carousel-control.left {
+  right: 52%;
+}
+.jhm-testimonial .jhm-carousel-control:hover,
+.jhm-testimonial .jhm-carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.jhm-testimonial .jhm-carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+.jhm-testimonial .jhm-carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255,255,255,0.25);
+  border-radius: 5px;
+}
+.jhm-testimonial .jhm-carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0,0,0,0.75);
+}
+.jhm-title {
+  padding: 10px 0;
+  font-size: 26px;
+  line-height: 23px;
+  position: relative;
+}
+.jhm-title span {
+  font-weight: 400;
+}
+[class*="title"] .jhm-title {
+  margin: -15px -15px 15px -15px;
+  padding: 15px;
+}
+.jhm-pull-left {
+  float: left;
+  margin-right: 15px;
+}
+.align-center {
+  text-align: center;
+
+
+}
+.jhm-width-item {
+  width: 90%;
+}
+.jhm-testimonial [class*="width-"],
+.jhm-testimonial [class^="width-"] {
+  /*float: left;*/
+  margin: 20px 0;
+  display: inline-block;
+  vertical-align: top;
+}
+.jhm-testimonial h2{
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: 300;
+}
+.jhm-testimonial .jhm-subtitle{
+  color: #616161;
+  font-weight: 300;
+}
+.jhm-testimonial .jhm-title {
+  padding-bottom: 0;
+}
+.jhm-testimonial img {
+  border-radius: 100%;
+  max-width: 110px;
+  margin-top: -10px;
+  margin-left: 20px;
+  border: 5px solid #ffffff;
+}
+.jhm-testimonial h4 {
+  text-align: left;
+  font-weight: 300;
+}
+.jhm-testimonial .jhm-testimonial-text {
+  background: #ffffff;
+  text-align: justify;
+  padding: 10px;
+  margin: 0 25px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.jhm-testimonial i {
+  padding-left: 15px;
+  padding-right: 5px;
+
+}
+
+
+@media (max-width: 480px) {
+  [class*="width-"],
+  [class^="width-"] {
+    width: 100%;
+    float: none;
+  }
+ }
+  .jhm-testimonial h2 {
+  font-size: 35px;
+	color: #9CCB3B; /*TMRLS*/
+  display: none;
+  }
+  .jhm-testimonial .jhm-subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    display: none;
+  }
+  .jhm-testimonial h4 {
+    font-size: 15px;
+  }
+  .jhm-testimonial h2 {
+    font-size: 40px;
+  }
+  .jhm-testimonial .jhm-subtitle{
+    font-size: 22px;
+  }
+  .jhm-testimonial h4 {
+    font-size: 15px;
+  }
+  .jhm-testimonial i {
+    padding-left: 5px;
+  }
+  .jhm-testimonial img {
+    margin: 0;
+	width:110px;
+	height:110px;
+	-webkit-transition: all 0.6s ease-in-out 0s;
+	-moz-transition: all 0.6s ease-in-out 0s;
+	-o-transition: all 0.6s ease-in-out 0s;
+	-ms-transition: all 0.6s ease-in-out 0s;
+	transition: all 0.6s ease-in-out 0s;
+  }
+.jhm-width-item:hover img{
+	-webkit-transform: scale(1.02) rotate(2deg);
+	-moz-transform: scale(1.02) rotate(2deg);
+	-o-transform: scale(1.02) rotate(2deg);
+	-ms-transform: scale(1.02) rotate(2deg);
+	transform: scale(1.02) rotate(2deg);
+	-webkit-transition: all 0.6s ease-in-out 0s;
+	-moz-transition: all 0.6s ease-in-out 0s;
+	-o-transition: all 0.6s ease-in-out 0s;
+	-ms-transition: all 0.6s ease-in-out 0s;
+	transition: all 0.6s ease-in-out 0s;
+}
+.jhm-width-item .jhm-testimonial-text{
+	-webkit-transition: all 0.6s ease-in-out 0s;
+	-moz-transition: all 0.6s ease-in-out 0s;
+	-o-transition: all 0.6s ease-in-out 0s;
+	-ms-transition: all 0.6s ease-in-out 0s;
+	transition: all 0.6s ease-in-out 0s;
+}
+.jhm-width-item:hover .jhm-testimonial-text{
+	color:#222A57;
+	-webkit-transition: all 0.6s ease-in-out 0s;
+	-moz-transition: all 0.6s ease-in-out 0s;
+	-o-transition: all 0.6s ease-in-out 0s;
+	-ms-transition: all 0.6s ease-in-out 0s;
+	transition: all 0.6s ease-in-out 0s;
+}

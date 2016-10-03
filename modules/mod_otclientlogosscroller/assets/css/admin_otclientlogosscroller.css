@@ -1,0 +1,41 @@
+.tabs{
+	 margin-top: 30px;
+}
+.tabs .tab {
+  padding: 0.5em 0.5em 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  background-color:#f4f8fa;
+  position: relative;
+  
+  display: inline-block;
+}
+.tabRemove{position: absolute; top: 2px; right: 2px;}
+.tabRemove > span {color: #bd362f;}
+.tabs .tab .col {
+  float: left;
+  margin: 5px 20px 15px 5px;
+}
+.tabs .tab label{
+  color: #686868;
+}
+.tabs .tab input[type="text"]{
+}
+.tabs .tab textarea{
+  width: 90%;
+}
+
+@media (max-width: 479px) {
+  .tabs .tab {margin-left: 0;}
+}
+span.spacer .ot_layer label {
+    color: #000;
+    float: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 3px 0;
+    max-width: none !important;
+    padding: 5px 0 !important;
+    text-align: center;
+    text-decoration:underline;
+}

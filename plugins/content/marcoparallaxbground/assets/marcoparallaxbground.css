@@ -1,0 +1,41 @@
+.mmlParallax, .mmlParallaxImage{
+	/** Remember to set viewport height, if you disable the css loading. **/
+    height: 100px;
+}
+.mmlEmbeddedNode {
+    clear: both;
+}
+.mmlEmbeddedNode img {
+    display: none;
+}
+.mmlParallaxWrap {
+    background-color: #EEE;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.mmlParallaxImage {
+    background-attachment: fixed;
+    background-color: #222;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mmlImageInfoWrap{
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 100%;
+	background-color: #EEE;
+}
+.mmlImageInfo {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px;
+}
+.mmlImageInfoCaption{
+    color: #C33232;
+    text-align: center;
+}

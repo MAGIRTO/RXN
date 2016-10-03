@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="ARTIST_LAYOUT">
+    <message>ADD_ARTIST_LAYOUT</message>
+  </layout>
+  <state>
+    <name>ARTIST_LAYOUT</name>
+    <description>ADD_ARTIST_LAYOUT</description>
+    <url addpath="/administrator/components/com_hdwmusic/elements">
+      <param name="id" type="artists" default="0" label="SELECT_ARTISTS" description="SELECT_ARTISTS_DESCRIPTION" />
+      <param name="show_letter_bar" type="radio" default="1" label="SHOW_LETTER_BAR" description="SHOW_LETTER_BAR_DESCRIPTION" >
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </param>
+    </url>
+    <params />
+    <fields name="request">
+      <fieldset name="request">
+        <field name="id" type="sql" default="0" label="SELECT_ARTISTS" description="SELECT_ARTISTS_DESCRIPTION"  
+			query="select artist_slug, artist_name from #__hdwmusic_artists where published=1 order by artist_name ASC" key_field="artist_slug" value_field="artist_name" >
+          <option value="0">DISPLAY_ALL_ARTISTS</option>
+        </field>
+        <field name="show_letter_bar" type="list" default="1" label="SHOW_LETTER_BAR" description="SHOW_LETTER_BAR_DESCRIPTION" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

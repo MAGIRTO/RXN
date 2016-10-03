@@ -1,0 +1,202 @@
+/**
+* @version   $Id: team.less 
+*/
+
+@import 'variables';
+@import 'mixins';
+@import 'icomoon';
+@import 'menu';
+@import 'theme';
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+@black:                 #000;
+@grayDarker:            #222;
+@grayDark:              #333;
+@gray:                  #555;
+@grayLight:             #999;
+@grayLighter:           #eee;
+@strips:                #f5f5f5;
+@white:                 #fff;
+
+// Accent colors
+// -------------------------
+@blue:                  #049cdb;
+@blueDark:              #0064cd;
+@green:                 #46a546;
+@red:                   #9d261d;
+@yellow:                #ffc40d;
+@orange:                #f89406;
+@pink:                  #c3325f;
+@purple:                #7a43b6;
+
+// RokSprocket
+[class*="sprocket"] {
+    a {
+        text-decoration: none;
+    }
+
+    [class*="pagination"] {
+        li {
+            background: @major_color;
+            position: relative;
+            display: block;
+            float: left;
+            margin: 0 5px;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0);
+            -webkit-transition: box-shadow 0.3s ease;
+            transition: box-shadow 0.3s ease;
+
+            span {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                outline: none;
+                display: block;
+                border-radius: 50%;
+                background-color: @major_color;
+                text-indent: -999em;
+                cursor: pointer;
+                position: absolute;
+                -webkit-transition: background-color 0.3s ease, -webkit-transform 0.3s ease;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+
+                &:hover, &:focus {
+                }
+            }
+
+            &.active {
+                background-color: darken(@major_color, 1%) !important;
+
+
+                span {
+                    -webkit-transform: scale(0.4);
+                    transform: scale(0.4);
+                }
+            }
+        }
+    }
+
+
+
+    [class*="arrows"] {
+        .arrow {
+            border: 1px solid @major_color;
+
+            &:before {
+                color: @major_color;
+            }
+
+            &:hover {
+                background: #f0f0f0;
+
+                &::before {
+                }
+            }
+        }
+    }
+
+    [class*="navigation"] {
+        .arrow {
+            border: 1px solid #222;
+
+            &:before {
+                color: @major_color;
+            }
+
+            &:hover {
+                background: @strips;
+
+                &::before {
+                }
+            }
+        }
+    }
+
+    .sprocket-loadmore, .sprocket-readmore, .readon {
+        color: #fff;
+        background: darken(@major_color, 10%);
+      display: inline-block;
+padding: 7px 14px;
+line-height: 1.5;
+border-radius: 0px;
+text-shadow: -2px 0px rgba(0, 0, 0, 0.3);
+box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+            background:@white;
+            box-shadow: -5px -5px 0px 0px rgba(0, 0, 0, 0.08);
+            color: #999;
+            text-shadow: -2px 0px rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+// RokSprocket Strips Arrow
+@media
+only screen and (min-width: 1195px) and (max-width: 1275px),
+only screen and (min-width: 960px) and (max-width: 1070px),
+only screen and (min-width: 768px) and (max-width: 880px),
+only screen and (min-width: 482px) and (max-width: 600px),
+only screen and (max-width: 480px) {
+	body.layout-mode-responsive {
+		.sprocket-strips {
+			.sprocket-strips-arrows .arrow {
+				&.prev {
+					left: -10px;
+				}
+				&.next {
+					right: -10px;
+				}
+			}
+		}
+	}
+}
+   .sprocket-strips-container {
+        .sprocket-strips-content {
+            background: @strips;
+            color: @black;
+            border:1px solid #e2e2e2;
+            box-shadow: 15px 15px 0px 0px rgba(0, 0, 0, 0.08);
+
+            &:hover {
+                background:@white;
+                color: @grayDark;
+            }
+        }
+    }
+
+    .sprocket-strips-title a {
+        color: @gray;
+    }
+
+.sprocket-headlines ul > li{ border-bottom: none;}
+.sprocket-headlines-badge span {
+    display: block;
+    border-bottom: 2px solid @grayLight ;
+    margin: 0.6rem;
+    padding: 0px !important;
+    font-size: 1.1em;
+    line-height: 1.2em;
+}
+.overlay-mode .sprocket-grids-b-text {background: @white;
+   color:  @grayDarker;
+   padding: 10px;                                                                       
+}
+#sp-feature .sp-module ul > li {
+    border-bottom: none;
+  
+}
+#sp-user1 .sp-module ul > li {
+    border-bottom: none;
+   
+}

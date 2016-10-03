@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style>
+  <name>Testimoniales</name>
+  <author>joomhome.com</author>
+  <description>Extension for joomla3.x.</description>
+  <version>1.0</version>
+  <files>
+    <public>
+    </public>
+    <admin></admin>
+  </files>
+  <config>
+    <fieldset name="Basic">
+    </fieldset>
+  </config>
+</style>

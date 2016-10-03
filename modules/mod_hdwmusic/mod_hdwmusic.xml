@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0.0" client="site" method="upgrade">
+  <name>HDW Music</name>
+  <author>Appten</author>
+  <creationDate>May 2015</creationDate>
+  <copyright>Copyright (c) 2015 - 2016 Appten. All rights reserved.</copyright>
+  <authorEmail>admin@appten.net</authorEmail>
+  <authorUrl>appten.net</authorUrl>
+  <version>1.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>Gallery Module for HDW Music.</description>
+  <files>
+    <folder>tmpl</folder>
+    <filename module="mod_hdwmusic">mod_hdwmusic.php</filename>
+    <filename>index.html</filename>
+    <filename>helper.php</filename>
+
+  </files>
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.mod_hdwmusic.ini</language>
+  </languages>
+  <params>
+    <param name="view" type="list" default="album" label="GALLERY_VIEW_LABEL" description="GALLERY_VIEW_DESCRIPTION">
+      <option value="album">ALBUM</option>
+    </param>
+    <param name="type" type="list" default="latest" label="GALLERY_TYPE_LABEL" description="GALLERY_TYPE_DESCRIPTION">
+      <option value="latest">LATEST</option>
+      <option value="popular">POPULAR</option>
+      <option value="featured">FEATURED</option>
+      <option value="random">RANDOM</option>
+    </param>
+    <param name="rows"  type="text"  default="3"  label="NO_OF_ROWS_LABEL"  description="NO_OF_ROWS_DESCRIPTION" />
+    <param name="columns"  type="text"  default="2"  label="NO_OF_COLUMNS_LABEL"  description="NO_OF_COLUMNS_DESCRIPTION" />
+    <param name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SFX_LABEL" description="MODULE_CLASS_SFX_DESCRIPTION" />
+  </params>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field name="view" type="list" default="album" label="GALLERY_VIEW_LABEL" description="GALLERY_VIEW_DESCRIPTION">
+          <option value="album">ALBUM</option>
+        </field>
+        <field name="type" type="list" default="latest" label="GALLERY_TYPE_LABEL" description="GALLERY_TYPE_DESCRIPTION">
+          <option value="latest">LATEST</option>
+          <option value="popular">POPULAR</option>
+          <option value="featured">FEATURED</option>
+          <option value="random">RANDOM</option>
+        </field>
+        <field name="rows"  type="text"  default="3"  label="NO_OF_ROWS_LABEL"  description="NO_OF_ROWS_DESCRIPTION" />
+        <field name="columns"  type="text"  default="2"  label="NO_OF_COLUMNS_LABEL"  description="NO_OF_COLUMNS_DESCRIPTION" />
+        <field name="moduleclass_sfx" type="text" default="" label="MODULE_CLASS_SFX_LABEL" description="MODULE_CLASS_SFX_DESCRIPTION" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

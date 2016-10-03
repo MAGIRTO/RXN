@@ -1,0 +1,112 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <link rel="stylesheet" href="css/plusgallery.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+		html,body {
+			
+		}
+		
+		body {
+			margin: 0;
+			padding: 20px 0;
+			text-align:  center;
+		}
+
+		#gallerywrapper {
+			margin: 30px 0;
+		}
+
+    #imagenGaleria {
+    
+    width: 110px; 
+    height: 110px; 
+    border-radius: 60px; 
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px; 
+    box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+    -moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+    cursor: -webkit-grab;
+     transition:all 0.3s ease-in-out;
+     perspective: 800px;
+     perspective-origin: 50% 100px;
+    }
+    #imagenGaleria:hover {      
+        border-style: solid;
+        border-color: red;
+        border-width: 5px;
+
+        }
+    a.menuGaleria {   
+
+      text-decoration: none;
+      color: white;
+        }
+    a.menuGaleria:focus { 
+      border-bottom: 3px solid red;     
+      font-weight: bolder;
+        }
+
+      .contenido {
+    padding-left: 1rem;
+    
+        }
+
+    td{
+      margin: 30px 0;
+    }
+	</style>
+  </head>
+<body>
+
+<table align="center">
+  <tbody>
+    <tr>
+      <td class="contenido">
+        <a class="menuGaleria" href=""  onclick="loadGallery('6130302883342855313'); return false;"><img src="images/galerias/salidas.jpg" id="imagenGaleria">
+       </a>  
+      </td>
+      <td class="contenido">
+        <a class="menuGaleria" href=""  onclick="loadGallery('6130296185989986705'); return false;"><img src="images/galerias/tatuajes.jpg" id="imagenGaleria">
+       </a>  
+      </td>
+      <td class="contenido">
+         <a class="menuGaleria" href=""  onclick="loadGallery('6130328685246951809'); return false;"><img src="images/galerias/trapos.jpg" id="imagenGaleria">
+       </a>
+      </td>
+      <td class="contenido">
+        <a class="menuGaleria" href=""  onclick="loadGallery('6130330933991270753'); return false;"><img src="images/galerias/viajes.jpg" id="imagenGaleria">
+       </a>
+      </td>
+      <td class="contenido">
+        <a class="menuGaleria" href=""  onclick="loadGallery('6130300209362361585'); return false;"><img src="images/galerias/banderas.jpg" id="imagenGaleria">
+       </a> 
+      </td>
+      <td class="contenido">
+         <a class="menuGaleria"   href=""  onclick="loadGallery('6130332457542847153'); return false;"><img src="images/galerias/murales.jpg" id="imagenGaleria">
+       </a>
+      </td>
+    </tr>
+  </tbody>
+</table>  
+
+
+
+<div id="gallerywrapper">
+</div>
+
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/jquery-1.7.2.min.js'>\x3C/script>")</script>
+  <script src="js/plusgallery.js"></script>
+  <script>
+  	var loadGallery = function(id){
+  		$('#gallerywrapper').html('<div id="plusgallery" data-userid="www.rexixtenxianorte.net" data-type="google" data-limit="300" data-album-id="' + id + '"></div>');
+  		$('#plusgallery').plusGallery();
+  	}
+  </script>
+</body>
+</html>

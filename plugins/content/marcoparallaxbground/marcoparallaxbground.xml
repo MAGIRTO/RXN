@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="content" method="upgrade">
+	<name>Content - Marco's Parallax Background</name>
+	<author>marco maria leoni</author>
+	<creationDate>Feb 2014</creationDate>
+	<copyright>Copyright (C) 2010-2014 mmleoni web consulting. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>red@mmleoni.net</authorEmail>
+	<authorUrl>www.mmleoni.net</authorUrl>
+	<version>1.0</version>
+	<description>Parallax background image for Joomla</description>
+	<files>
+		<filename plugin="marcoparallaxbground">marcoparallaxbground.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.plg_content_marcoparallaxbground.ini</language>
+		<!--language tag="it-IT">language/it-IT.plg_content_marcoparallaxbground.ini</language-->
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<!--  filter="\.jpg$" -->
+				<field name="image_path" type="text" default="/images/" label="MPBG_IMAGE_PATH_LABEL" required="0" description="MPBG_IMAGE_PATH_DESC" />
+				<field name="image_or" type="text" default="" label="MPBG_IMAGE_OR_LABEL" required="0" description="MPBG_IMAGE_OR_DESC" />
+				<field name="image_caption" type="text" default="" label="MPBG_IMAGE_CAPTION_LABEL" required="0" description="MPBG_IMAGE_CAPTION_DESC" />
+				<field name="image_height" type="text" default="auto" label="MPBG_IMAGE_HEIGHT_LABEL" required="1" description="MPBG_IMAGE_HEIGHT_DESC" />
+				
+				<field name="useCss" type="radio" default="1" label="MPBG_LOADCSS_LABEL" description="MPBG_LOADCSS_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>				
+				<field name="css_id" type="text" default="" label="MPBG_CSSID_LABEL" required="0" description="MPBG_CSSID_DESC" />
+				<field name="css_additional" type="textarea" default="" label="MPBG_CSS_ADD_LABEL" required="0" description="MPBG_CSS_ADD_DESC" />
+				<field type="spacer" name="myspacer1" class="text" label="MPBG_PLUGINUSE" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

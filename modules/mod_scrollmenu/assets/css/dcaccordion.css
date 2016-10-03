@@ -1,0 +1,7 @@
+/* Page */
+
+.demo-container ul, .demo-container ul li{list-style: none;}
+.demo-container ul.text {margin-bottom: 1em; line-height: 1.5em;}
+.demo-container .text-center {text-align: center;}
+.demo-container .clear {clear: both;}
+.demo-container .dcjq-count {float: right;}

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+    <name>PCS Mid-Menu Slider&#153;</name>
+    <author>Jason Buzzeo</author>
+	<creationDate>February 2014</creationDate>
+	<copyright>Copyright (C) 2014 Paradigm Custom Solutions. All rights reserved.</copyright>
+	<license>GNU General Public License version 3; see LICENSE.txt</license>
+	<authorEmail>jason.buzzeo@ParadigmCustomSolutions.com</authorEmail>
+	<authorUrl>www.ParadigmCustomSolutions.com</authorUrl>
+    <version>1.0.11</version>
+
+    <description>A module to display a stylish image based navigation with a text overlay that slides in on mouse over and disappears on mouse out.</description>
+    	
+    <files>
+	    <folder>css</folder>
+	    <folder>js</folder>
+        <folder>tmpl</folder>
+        <folder>sql</folder>
+       	<filename module="mod_midmenuslider">mod_midmenuslider.php</filename>
+		<filename>mod_midmenuslider.xml</filename>
+       	<filename>index.html</filename>
+       	<filename>helper.php</filename>
+       	<filename>LICENSE</filename>
+       	<filename>README.md</filename>
+    </files>
+	
+	<update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+	
+    <config>
+		<fields name="params">
+			<fieldset name="Menu-Item-1" label="Menu Item 1">
+				<field
+					name="item1"
+					type="note"
+					label="Menu Item 1" />
+				<field 
+					name="image1" 
+					type="media" 
+					directory="images" />
+				<field 
+					name="imageHover1" 
+					type="media" 
+					directory="images" /> 
+				<field
+					name="text1"
+					type="textarea"
+					label="Slider Text"
+					description="Enter the message you want to appear on the slider" filter="raw" />
+				<field
+					name="textColor1"
+					type="color"
+					default="#fff"
+					label="Text Color"
+					description="Choose a color for the text. Default = White." />
+				<field
+					name="textSize1"
+					type="text"
+					default=".8em"
+					label="Text size"
+					description="Enter size for slider text. Default = .8em" />
+				<field
+					name="bgColor1"
+					type="color"
+					default="#000" 
+					label="Slider Background Color" 
+					description="Choose a color for the slider background. Default = Black." />
+				<field
+					name="link1"
+					type="menuitem"
+					label="Select a Menu Item"
+					description="Menu page that will be used when the user clicks on this item." />
+				<field name="opacity1" type="list" default="50" label="Select an option" description="Percent the hover image will fade away to reveal the text slider behind it." >
+  					<option value="80">80%</option>
+  					<option value="75">75%</option>
+  					<option value="70">70%</option>
+  					<option value="65">65%</option>
+  					<option value="60">60%</option>
+  					<option value="55">55%</option>
+  					<option value="50">50%</option>
+  					<option value="45">45%</option>
+  					<option value="40">40%</option>
+  					<option value="35">35%</option>
+  					<option value="30">30%</option>
+  					<option value="25">25%</option>
+				</field>
+				<field
+					name="sliderHeight1"
+					type="text"
+					label="Slider Height"
+					description="Enter size for slider. if left blank the slider will fill the entire available area." 
+					filter="integer" />
+				<field
+					name="speed1"
+					type="text"
+					default="500" 
+					label="Slider speed" 
+					description="Customize how fast or slow the slider moves. Default = 500." />
+			</fieldset>
+			
+			<fieldset name="Menu-Item-2" label="Menu Item 2">
+				<field
+					name="item2"
+					type="note"
+					label="Menu Item 2" />
+				<field name="image2" type="media" directory="images" />
+				<field name="imageHover2" type="media" directory="images" />
+				<field
+					name="text2"
+					type="textarea"
+					label="Slider Text"
+					description="Enter the message you want to appear on the slider" filter="raw" />
+				<field
+					name="textColor2"
+					type="color"
+					default="#fff"
+					label="Text Color"
+					description="Choose a color for the text. Default = White." />
+				<field
+					name="textSize2"
+					type="text"
+					default=".8em"
+					label="Text size"
+					description="Enter size for slider text. Default = .8em" />
+				<field
+					name="bgColor2"
+					type="color"
+					default="#000" 
+					label="Slider Background Color" 
+					description="Choose a color for the slider background. Default = Black." />
+				<field
+					name="link2"
+					type="menuitem"
+					label="Select a Menu Item"
+					description="Menu page that will be used when the user clicks on this item." />
+				<field name="opacity2" type="list" default="50" label="Select an option" description="Percent the hover image will fade away to reveal the text slider behind it.">
+  					<option value="80">80%</option>
+  					<option value="75">75%</option>
+  					<option value="70">70%</option>
+  					<option value="65">65%</option>
+  					<option value="60">60%</option>
+  					<option value="55">55%</option>
+  					<option value="50">50%</option>
+  					<option value="45">45%</option>
+  					<option value="40">40%</option>
+  					<option value="35">35%</option>
+  					<option value="30">30%</option>
+  					<option value="25">25%</option>
+				</field>
+				<field
+					name="sliderHeight2"
+					type="text"
+					label="Slider Height"
+					description="Enter size for slider. if left blank the slider will fill the entire available area." filter="integer" />
+				<field
+					name="speed2"
+					type="text"
+					default="500" 
+					label="Slider speed" 
+					description="Customize how fast or slow the slider moves. Default = 500." />
+			</fieldset>
+			<fieldset name="Menu-Item-3" label="Menu Item 3">
+				<field
+					name="item3"
+					type="note"
+					label="Menu Item 3" />
+				<field name="image3" type="media" directory="images" />
+				<field name="imageHover3" type="media" directory="images" />
+				<field
+					name="text3"
+					type="textarea"
+					label="Slider Text"
+					description="Enter the message you want to appear on the slider" filter="raw" />
+				<field
+					name="textColor3"
+					type="color"
+					default="#fff"
+					label="Text Color"
+					description="Choose a color for the text. Default = White." />
+				<field
+					name="textSize3"
+					type="text"
+					default=".8em"
+					label="Text size"
+					description="Enter size for slider text. Default = .8em" />
+				<field
+					name="bgColor3"
+					type="color"
+					default="#000" 
+					label="Slider Background Color" 
+					description="Choose a color for the slider background. Default = Black." />
+				<field
+					name="link3"
+					type="menuitem"
+					label="Select a Menu Item"
+					description="Menu page that will be used when the user clicks on this item." />
+				<field name="opacity3" type="list" default="50" label="Select an option" description="Percent the hover image will fade away to reveal the text slider behind it.">
+  					<option value="80">80%</option>
+  					<option value="75">75%</option>
+  					<option value="70">70%</option>
+  					<option value="65">65%</option>
+  					<option value="60">60%</option>
+  					<option value="55">55%</option>
+  					<option value="50">50%</option>
+  					<option value="45">45%</option>
+  					<option value="40">40%</option>
+  					<option value="35">35%</option>
+  					<option value="30">30%</option>
+  					<option value="25">25%</option>
+				</field>
+				<field
+					name="sliderHeight3"
+					type="text"
+					label="Slider Height"
+					description="Enter size for slider. if left blank the slider will fill the entire available area." filter="integer" />
+				<field
+					name="speed3"
+					type="text"
+					default="500" 
+					label="Slider speed" 
+					description="Customize how fast or slow the slider moves. Default = 500." />
+			</fieldset>
+			<fieldset name="Menu-Item-4" label="Menu Item 4">
+				<field
+					name="item4"
+					type="note"
+					label="Menu Item 4" />
+				<field name="image4" type="media" directory="images" />
+				<field name="imageHover4" type="media" directory="images" />
+				<field
+					name="text4"
+					type="textarea"
+					label="Slider Text"
+					description="Enter the message you want to appear on the slider" filter="raw" />
+				<field
+					name="textColor4"
+					type="color"
+					default="#fff"
+					label="Text Color"
+					description="Choose a color for the text. Default = White." />
+				<field
+					name="textSize4"
+					type="text"
+					default=".8em"
+					label="Text size"
+					description="Enter size for slider text. Default = .8em" />
+				<field
+					name="bgColor4"
+					type="color"
+					default="#000" 
+					label="Slider Background Color" 
+					description="Choose a color for the slider background. Default = Black." />
+				<field
+					name="link4"
+					type="menuitem"
+					label="Select a Menu Item"
+					description="Menu page that will be used when the user clicks on this item." />
+				<field name="opacity4" type="list" default="50" label="Select an option" description="Percent the hover image will fade away to reveal the text slider behind it.">
+  					<option value="80">80%</option>
+  					<option value="75">75%</option>
+  					<option value="70">70%</option>
+  					<option value="65">65%</option>
+  					<option value="60">60%</option>
+  					<option value="55">55%</option>
+  					<option value="50">50%</option>
+  					<option value="45">45%</option>
+  					<option value="40">40%</option>
+  					<option value="35">35%</option>
+  					<option value="30">30%</option>
+  					<option value="25">25%</option>
+				</field>
+				<field
+					name="sliderHeight4"
+					type="text"
+					label="Slider Height"
+					description="Enter size for slider. if left blank the slider will fill the entire available area." filter="integer" />
+				<field
+					name="speed4"
+					type="text"
+					default="500" 
+					label="Slider speed" 
+					description="Customize how fast or slow the slider moves. Default = 500." />
+			</fieldset>
+		</fields>
+	</config>
+	
+	<updateservers>
+        <server type="extension" priority="1" name="Mid-Menu Slider Updates" enabled="1"><![CDATA[http://www.paradigmcustomsolutions.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=1&dummy=name.xml]]></server>
+    </updateservers>
+	
+</extension>

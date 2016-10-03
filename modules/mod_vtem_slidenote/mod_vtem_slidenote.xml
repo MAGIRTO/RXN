@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site" method="upgrade">
+	<name>VTEM SlideNote</name>
+	<author>Nguyen Van Tuyen</author>
+	<creationDate>06/06/2011</creationDate>
+	<copyright>Copyright (C) 2010 VTEM. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>tuyen0110@gmail.com</authorEmail>
+	<authorUrl>www.vtem.net</authorUrl>
+	<version>1.1</version>
+	<description>Sticky notes for joomla</description>
+	<files>
+		<filename module="mod_vtem_slidenote">mod_vtem_slidenote.php</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+		<filename>index.html</filename>
+		<filename>mod_vtem_slidenote.xml</filename>
+	</files>
+	
+	<config>
+	  <fields name="params">
+		<fieldset name="basic">
+		<field name="width"  type="text" label="Width" default="35%" description="Set the width of the slideNote"/>
+		<field name="height"  type="text" label="Height" default="auto" description="Set the height of the slideNote"/>
+		<field name="background"  type="text" label="Background" default="#FBEC78" description=""/>
+		<field name="color"  type="text" label="Text color" default="#333333" description=""/>
+		<field name="title"  type="text" label="Title" default="SlideNote Demo" description=""/>
+		<field name="subtitle"  type="text" label="Sub-title" default="SlideNote is a customizable, flexible Joomla module for easily displaying sliding notifications." description="" size="55" filter="raw"/>
+		<field name="des" type="textarea" label="Description" default="To hide this notification, scroll up or click the close image. " description="" rows="5" cols="50" filter="raw"/>
+		<field name="1spacer" type="spacer" hr="true" />
+		<field name="where"  type="text" default="50" label="Where" description="specifies how far down the user must scroll before the notification slides into view. If set at 0, the notification will display on page load."/>
+		<field name="corner"  type="radio" default="right" label="Corner" description="controls from which side of the screen the notification will slide in.">
+		<option value="left">Left</option>
+		<option value="right">Right</option>
+		</field>
+		<param name="displayCount" type="text" label="Display Count" default="6" description="controls how many times the notification should display."/>
+		<field name="closeImage" type="imagelist" default="close.png" label="Close image" description="When clicked, it will slide the note out of view. The note will not display until the next time the user scrolls passed the where value." directory="modules/mod_vtem_slidenote/assets/images" exclude="" stripext="" />
+		<field name="script" type="radio" default="0" label="jQuery Library" description="">
+		<option value="1">Yes</option>
+		<option value="0">No</option>
+		</field>
+		</fieldset>
+	 </fields>
+   </config>
+</extension>

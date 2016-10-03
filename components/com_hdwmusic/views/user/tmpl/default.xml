@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="USER_LAYOUT">
+    <message>ADD_USER_LAYOUT</message>
+  </layout>
+  <state>
+    <name>USER_LAYOUT</name>
+    <description>ADD_USER_LAYOUT</description>
+  </state>
+</metadata>

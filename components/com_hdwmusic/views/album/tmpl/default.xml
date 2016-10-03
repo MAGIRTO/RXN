@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="ALBUM_LAYOUT">
+    <message>ADD_ALBUM_LAYOUT</message>
+  </layout>
+  <state>
+    <name>ALBUM_LAYOUT</name>
+    <description>ADD_ALBUM_LAYOUT</description>
+    <url addpath="/administrator/components/com_hdwmusic/elements">
+      <param name="id" type="albums" default="0" label="SELECT_ALBUMS" description="SELECT_ALBUMS_DESCRIPTION" />
+      <param name="show_letter_bar" type="radio" default="1" label="SHOW_LETTER_BAR" description="SHOW_LETTER_BAR_DECRIPTION" >
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </param>
+    </url>
+    <params />
+    <fields name="request">
+      <fieldset name="request">
+        <field name="id" type="sql" default="0" label="SELECT_ALBUMS" description="SELECT_ALBUMS_DESCRIPTION"  
+			query="select album_slug, album_name from #__hdwmusic_albums where published=1 order by album_name ASC" key_field="album_slug" value_field="album_name" >
+          <option value="0">DISPLAY_ALL_ALBUMS</option>
+        </field>
+        <field name="show_letter_bar" type="list" default="1" label="SHOW_LETTER_BAR" description="SHOW_LETTER_BAR_DECRIPTION" >
+          <option value="0">No</option>
+          <option value="1">Yes</option>
+        </field>
+      </fieldset>
+    </fields>
+  </state>
+</metadata>

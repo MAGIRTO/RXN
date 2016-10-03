@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+    <name>System - PRI Animation</name>
+    <author>Devpri</author>
+    <creationDate>August , 2014</creationDate>
+    <copyright>Copyright (c) 2010 - 2014 Devpri. All rights reserved.</copyright>
+    <authorEmail>contact@devpri.com</authorEmail>
+    <authorUrl>www.devpri.com</authorUrl>
+    <version>1.0</version>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <description>PRI Aniamation is Joomla! Plugin for on-scroll reveal animations.</description>
+    <files>
+        <filename plugin="prianimation">prianimation.php</filename>
+		<folder>assets</folder>
+		<folder>libraries</folder>
+    </files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+					<field name="disable_animation_on_mobile" type="list" default="1" label="Disable On Mobile" description="Disable Parallax on Mobile and Tablet devices.">
+						<option value="1">JYES</option>
+						<option value="0">JNO</option>
+					</field>
+					<field name="animation_duration" type="text" default="1000" label="Animation Duration" description="Animation Duration in ms."/>
+					<field name="animation_offset" type="text" default="100" label="Animation Offset" description="Define the distance between the bottom of browser viewport and the top of hidden box.
+When the user scrolls and reach this distance the hidden box is revealed."/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

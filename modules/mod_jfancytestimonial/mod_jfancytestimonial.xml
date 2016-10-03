@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site">
+	<name>J-lites Fancy Testimonial</name>
+	<author>Joomlaites</author>
+	<creationDate>June 2014</creationDate>
+	<copyright>Copyright (C) 2014 - 2020 Joomlaites</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>joomlaites@gmail.com</authorEmail>
+	<authorUrl>www.joomlaites.com</authorUrl>
+	<version>3.1</version>
+	<description>
+	<![CDATA[ <h3 style="color:#009bd4">Joomlaites Fancy Testimonial by Joomlaites </h3>
+	      <p>Important, For more information, documentation and support, please visit at <a href="http://www.joomlaites.com/forum" target="_blank">Joomlaites</a></p>
+		]]>
+	</description>
+	<files>
+        <filename>mod_jfancytestimonial.xml</filename>
+        <filename module="mod_jfancytestimonial">mod_jfancytestimonial.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>jfancytestimonial.php</filename>
+          <folder>assets</folder>
+         <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+     <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_jfancytestimonial.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_jfancytestimonial.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jfancytestimonial">
+			<fieldset name="basic"></fieldset>
+			
+				<fieldset name="MOD_JFANCYTESTIMONIAL_GENERAL_SETTINGS">
+					<field type="spacer" name="myspacer" label="&lt;h2&gt;Testimonial Layout Content&lt;/h2&gt;"/>
+					<field type="list" class="btn-group" name="j_style" label="MOD_JFANCYTESTIMONIAL_LAYOUT" description="MOD_JFANCYTESTIMONIAL_LAYOUT_DES" default="1" >
+						<option value="1">MOD_JFANCYTESTIMONIAL_LIST_COLUMN</option>
+						<option value="2">MOD_JFANCYTESTIMONIAL_2_LIST_COLUMN</option>
+						<option value="3">MOD_JFANCYTESTIMONIAL_SLIDEDER_GRID</option>
+					</field>
+									
+					<field type="jfancytestimonial" name="jfancytestimonial" label="" description=""/>  
+				</fieldset>
+				
+				
+				<fieldset name="MOD_JFANCYTESTIMONIAL_GENERAL_FEATURE">
+					<field type="spacer" name="myspacer1" label="&lt;h2&gt;Basic Feature&lt;/h2&gt;"/>
+					<field name="autorun" type="list" default="yes" label="Image Auto Run" description="It is used for last Theme">
+						<option value="yes">Yes</option>
+						<option value="no">No </option>
+					</field>
+					<field name="contenttopbottom" type="list" default="yes" label="Content Show" description="(content show top of the image or bottom of the image)">
+						<option value="up">Up</option>
+						<option value="down">Down</option>
+					</field>
+					<field name="background" type="color" default="#eee" label="Background"  description="Background" />
+					<field name="padding" type="text" default="10" label="Padding"  description="Padding" />
+					<field name="margin" type="text" default="0" label="Margin"  description="Margin" />
+					<field name="nameweight" type="list" label="Profile Name Weight"  description="(Bold)"  default="600" >
+						<option value="100">100</option>
+						<option value="200">200</option>
+						<option value="300">300</option>
+						<option value="400">400</option>
+						<option value="500">500</option>
+						<option value="600">600</option>
+						<option value="700">700</option>
+						<option value="800">800</option>
+						<option value="900">900</option>
+						<option value="normal">normal</option>
+						<option value="bold">bold</option>
+						<option value="bolder">bolder</option>
+						<option value="lighter">lighter</option>
+						<option value="initial">initial</option>
+						<option value="inherit">inherit</option>
+					</field>
+					<field name="namesize" type="text" default="15" label="Profile Name Size"  description="Profile Name Size" />
+					<field name="namecolor" type="color" default="12" label="Profile Name Color"  description="Profile Name Color" />
+					<field name="workweight" type="list" label="Profile Work Weight"  description="(Bold)"  default="600" >
+						<option value="100">100</option>
+						<option value="200">200</option>
+						<option value="300">300</option>
+						<option value="400">400</option>
+						<option value="500">500</option>
+						<option value="600">600</option>
+						<option value="700">700</option>
+						<option value="800">800</option>
+						<option value="900">900</option>
+						<option value="normal">normal</option>
+						<option value="bold">bold</option>
+						<option value="bolder">bolder</option>
+						<option value="lighter">lighter</option>
+						<option value="initial">initial</option>
+						<option value="inherit">inherit</option>
+					</field>
+					<field name="worksize" type="text" default="15" label="Profile Work Size"  description="Profile Work Size" />
+					<field name="workcolor" type="color" default="#eee" label="Profile Work Color"  description="Profile Work Color" />
+					<field name="contenttextmargin" type="text" default="10" label="Content Text Margin"  description="Content Text Margin" />
+					<field name="contenttextpadding" type="text" default="10" label="Content Text Padding"  description="Content Text Padding" />
+					<field name="contenttextsize" type="text" default="12" label="Content Text Size"  description="Content Text Size" />
+					<field name="contenttextcolor" type="color" default="#999" label="Content Text Color"  description="Content Text Color" />
+					<field name="contenttextstyle" type="list" label="Content Text Style"  description="Content Text Style"  default="600" >
+						<option value="normal">normal</option>
+						<option value="italic">italic</option>
+						<option value="oblique">oblique</option>
+						<option value="initial">initial</option>
+						<option value="inherit">inherit</option>
+					</field>
+					
+					<field type="spacer" name="myspacer3" label="&lt;h2&gt;Content Image Feature&lt;/h2&gt;"/>
+					<field name="contentimagevisible"  default="Yes" type="list" label="Content Image Visible"  description="(Image show in background or no)" >
+						<option value="No">No</option>
+						<option value="Yes">Yes</option>
+					</field>	
+					<field name="contentimagewidth" type="text" default="120" label="Content Image Width"  description="Content Image Width" />
+					<field name="contentimageheight" type="text" default="100" label="Content Image Height"  description="Content Image Height" />
+					<field name="contentimageopacity" type="list" default=".6" label="Content Image Opacity"  description="Content Image Opacity" >
+						<option value="0">0</option>
+						<option value=".1">.1</option>
+						<option value=".2">.2</option>
+						<option value=".3">.3</option>
+						<option value=".4">.4</option>
+						<option value=".5">.5</option>
+						<option value=".6">.6</option>
+						<option value=".7">.7</option>
+						<option value=".8">.8</option>
+						<option value=".9">.9</option>
+						<option value="1">1</option>
+					</field>
+					<field name="contentimageheight" type="text" default="100" label="Content Image Height"  description="Content Image Height" />
+					
+					<field type="spacer" name="myspacer2" label="&lt;h2&gt;Arrow Top Setting&lt;/h2&gt;"/>
+					<field name="arrowbackground" type="color" default="#eee" label="Arrow Background"  description="Arrow Background" />
+					<field name="arrowwidth" type="text" default="15" label="Arrow Top Width"  description="Arrow Top Width" />
+					<field name="arrowmargin" type="text" default="15" label="Arrow Top Margin"  description="(Shift According to you)" />
+					
+					<field type="spacer" name="myspacer4" label="&lt;h2&gt;Arrow Down Setting&lt;/h2&gt;"/>
+					<field name="arrowdownbackground" type="color" default="#eee" label="Arrow Down Background"  description="Arrow Down Background" />
+					<field name="arrowdownwidth" type="text" default="15" label="Arrow Down Width"  description="Arrow Down Width" />
+					<field name="arrowdownmargin" type="text" default="15" label="Arrow Down Margin"  description="(Shift According to you)" />
+                                        <field type="spacer" name="myspacer5" label="&lt;h2&gt;Slider Testimonial Setting&lt;/h2&gt;"/>
+                                        <field name="viewportbackgroundcolor" type="color" default="#rrggbb" label="slider Background"  description="Background color for slider" />
+				        <field name="viewportborderpx" type="text" default="0" label="Border"  description="set border for slider" />
+                                        <field name="viewportbordercolor" type="color" default="#rrggbb" label="Border Color"  description="set border color for slider" />
+                                        <field name="viewportshadowpx" type="text" default="0" label="Box Shadow (px value)"  description="Box shadow for slider(only write px value do not write px" />
+                                        <field name="viewportshadowcolor" type="color" default="#rrggbb" label="Shadow color"  description="Box Shadow color for slider" />
+				</fieldset>
+		</fields>
+	</config>
+	
+</extension>

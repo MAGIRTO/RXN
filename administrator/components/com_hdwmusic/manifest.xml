@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>HDW Music</name>
+  <author>Appten</author>
+  <creationDate>May 2015</creationDate>
+  <copyright>Copyright (c) 2015 - 2016 Appten. All rights reserved.</copyright>
+  <authorEmail>admin@appten.net</authorEmail>
+  <authorUrl>appten.net</authorUrl>
+  <version>1.0</version>
+  <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+  <description>Thank you for installing com_hdwmusic by Appten, The Most Powerful Audio Player Component to Play Musics online.</description>
+  <install>
+    <sql>
+      <file charset="utf8" driver="mysql">install.sql</file>
+      <file driver="mysql">install.mysql4.sql</file>
+      <file charset="utf8" driver="mysqli">install.sql</file>
+      <file driver="mysqli">install.mysql4.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <sql>
+      <file charset="utf8" driver="mysql">uninstall.sql</file>
+      <file driver="mysql">uninstall.sql</file>
+      <file charset="utf8" driver="mysqli">uninstall.sql</file>
+      <file driver="mysqli">uninstall.sql</file>
+    </sql>
+  </uninstall>
+  <languages folder="components/language">
+    <language tag="en-GB">en-GB/en-GB.com_hdwmusic.ini</language>
+  </languages>
+  <files folder="components/com_hdwmusic">
+    <folder>assets</folder>
+    <folder>models</folder>
+    <folder>views</folder>
+    <folder>js</folder>
+    <filename>controller.php</filename>
+    <filename>index.html</filename>
+    <filename>hdwmusic.php</filename>
+    <filename>router.php</filename>
+    <filename>player.swf</filename>
+  </files>
+  <administration>
+    <menu img="components/com_hdwmusic/assets/music.png">COM_HDWMUSIC</menu>
+    <files folder="administrator/components/com_hdwmusic">
+      <folder>assets</folder>
+      <folder>css</folder>
+      <folder>elements</folder>
+      <folder>models</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+      <filename>hdwmusic.php</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>install.mysql4.sql</filename>
+      <filename>install.sql</filename>
+      <filename>uninstall.sql</filename>
+      <filename>toolbar.hdwmusic.php</filename>
+      <filename>toolbar.hdwmusic.html.php</filename>
+    </files>
+    <languages folder="administrator/language">
+      <language tag="en-GB">en-GB/en-GB.com_hdwmusic.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_hdwmusic.menu.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_hdwmusic.sys.ini</language>
+    </languages>
+  </administration>
+  <installfile>install.hdwmusic.php</installfile>
+  <uninstallfile>uninstall.hdwmusic.php</uninstallfile>
+  <scriptfile>script.hdwmusic.php</scriptfile>
+</extension>

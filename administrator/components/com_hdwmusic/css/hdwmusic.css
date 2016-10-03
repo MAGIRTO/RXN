@@ -1,0 +1,143 @@
+/*
+ * @version		$Id: hdwmusic.css 1.0 2015-05-21 $
+ * @package		Joomla
+ * @copyright   Copyright (C) 2015-2016 Appten
+ * @license     GNU/GPL http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Header */
+.icon-48-music {
+	background:url(../assets/logo.png) no-repeat 0 50%;
+}
+.header {
+	color:#333333!important;
+	padding-left:42px!important;
+}
+.pagetitle {
+	color:#333333!important;
+	padding-left:42px!important;
+}
+span.hdwnote {
+	display: block;
+	background:#FFD;
+	border:1px solid #e7e7e7;
+	color:#333;
+	margin:16px 0px 8px 0px;
+	padding:8px 10px 8px 10px;
+	text-align:left;
+}
+#hdwmusic {
+	background-color:#fff;
+	border:1px solid #E7E7E7;
+	padding:5px 17px 17px 17px;
+	margin:10px;
+	color:#444;
+	overflow:hidden;
+}
+#hdwmusic table.admintable td, #hdwmusic table.admintable th {
+	font-size:11px;
+	color:#444;
+}
+.hdwkey {
+	font-weight:bold;
+	padding-right:20px;
+}
+#hdwmusic textarea {
+	color:#444;
+}
+.hdwheader {
+	font-size:18px;
+	font-weight:bold;
+	color:#444;
+	margin:10px 0px;
+}
+#hdwmusic input, #hdwmusic select {
+	padding:3px;
+	float:none;
+	color:#444;
+}
+#hdwmusic a:hover {
+	text-decoration:none;
+}
+#hdwmusic button {
+	padding:3px 5px;
+	font-size:11px;
+	font-weight:bold;
+	color:#444;
+}
+#hdwmusic th a:link {
+	color:#666;
+}
+.hdwicon {
+	text-align: center;
+	margin-right: 9px;
+	float: left;
+	margin-bottom: 5px;
+}
+.hdwicon a {
+	display: block;
+	float: left;
+	border: 1px solid #e7e7e7;
+	height: 97px;
+	width: 107px;
+	color: #333;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.hdwicon a:hover {
+	text-decoration: none;
+	border-left: 1px solid #eee;
+	border-top: 1px solid #eee;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: #f9f9f9;
+	color: #0B55C4;
+}
+.hdwicon img {
+	padding: 10px 0;
+	margin: 0 auto;
+}
+.hdwicon span {
+	display: block;
+	text-align: center;
+	font-weight:bold;
+}
+table.adminlist {
+	background-color: #E7E7E7;
+}
+table.adminlist tr td {
+	height: 25px;
+}
+table.admintable td {
+	padding:3px;
+}
+#hdwmusic form dl.tabs {
+	float: left;
+	margin: 10px 0 -1px 0;
+	z-index: 50;
+}
+#hdwmusic form dl.tabs dt {
+	float: left;
+	padding: 4px 10px;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin-left: 3px;
+	background: #f0f0f0;
+	color: #666;
+}
+#hdwmusic form dl.tabs dt.open {
+	background: #F9F9F9;
+	border-bottom: 1px solid #F9F9F9;
+	z-index: 100;
+	color: #000;
+}
+#hdwmusic form div.current {
+	clear: both;
+	border: 1px solid #ccc;
+	padding: 10px 10px;
+}
+#hdwmusic form div.current dd {
+	padding: 0;
+	margin: 0;
+}
